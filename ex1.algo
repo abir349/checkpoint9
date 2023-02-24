@@ -1,0 +1,21 @@
+:Tableau[1..n]:Car
+Var nl,i:Entier
+Début
+ Ecrire("Entrer le nombre des lettres dans le mot:")
+ Lire(nl)
+ Redim(T[nl])
+ Pour i<--1 à nl Faire
+  Lire(T[i])
+ FinPour
+ Pour i<--1 à nl Faire
+  Si T[i]=T[nl] Alors
+   nl<--nl-1
+    Si i=nl OU nl=i+1 Alors
+     Ecrire("Bravo! ce mot est un palindrome")
+    FinSi
+  Sinon
+   Ecrire("Désolé, ce mot n'est pas un palindrome")
+   i<--nl
+  FinSi
+ FinPour
+Fin
